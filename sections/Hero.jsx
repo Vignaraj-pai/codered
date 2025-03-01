@@ -5,7 +5,9 @@ import styles from '../styles';
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
 const Hero = () => (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
+  <section className={`${styles.yPaddings}`}
+    style={{ paddingTop: '10px' }}
+  >
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -15,18 +17,40 @@ const Hero = () => (
     >
       <div className="relative z-10 flex flex-col items-center justify-center">
         <motion.h1
-          variants={textVariant(1.1)}
+          variants={slideIn('left', 'tween', 0.2, 1)}
           className={styles.heroHeading}
+          style={{ fontFamily: 'Spaceage, sans-serif', fontSize: '3rem', opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
-          Metadroid
+          THE
         </motion.h1>
+        <motion.h1
+          variants={slideIn('right', 'tween', 0.4, 1)}
+          className={styles.heroHeading}
+          style={{ fontFamily: 'Spaceage, sans-serif', opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          LAZARUS
+        </motion.h1>
+        <motion.h1
+          variants={slideIn('left', 'tween', 0.6, 1)}
+          className={styles.heroHeading}
+          style={{ fontFamily: 'Spaceage, sans-serif', fontSize: '3rem', opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          MISSIONS
+        </motion.h1>
+
         <motion.div
           variants={textVariant(1.2)}
           className="flex flex-row items-center justify-center"
         >
-          <h1 className={styles.heroHeading}> Ma</h1>
+          {/* <h1 className={styles.heroHeading}> Ma</h1>
           <div className={styles.heroDText} />
-          <h1 className={styles.heroHeading}> Ness</h1>
+          <h1 className={styles.heroHeading}> Ness</h1> */}
         </motion.div>
       </div>
 
@@ -36,22 +60,22 @@ const Hero = () => (
       >
         <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] sm:-top-[20px] -top-[10px]" />
         <img
-          src="/cover.png"
+          src="/planet-09.png"
           alt="cover"
-          className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
+          className="w-full sm:h-[500px] h-[350px] object-cover rounded-l-[140px] z-10 relative"
         />
 
-        <a href="#explore">
+        {/* <a href="#explore">
           <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10 2xl:-ml-[100px]">
             <motion.img
               src="/stamp.png"
               alt="stamp"
               className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain "
-              animate={{ rotate: 360 }}
+              animate={{ rotate: 360, opacity: [0, 1] }}
               transition={{ repeat: Infinity, duration: 7, repeatType: 'loop' }}
             />
           </div>
-        </a>
+        </a> */}
       </motion.div>
     </motion.div>
   </section>

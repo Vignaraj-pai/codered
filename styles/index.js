@@ -1,4 +1,9 @@
 const styles = {
+  '@font-face': {
+    fontFamily: 'Spaceage',
+    src: 'url(/spaceage.ttf) format("truetype")',
+  },
+  headerfontFamily: 'Spaceage, sans-serif',
   innerWidth: '2xl:max-w-[1280px] w-full',
   innerWidth2: '2xl:max-w-[2200px] w-full',
   interWidth: 'lg:w-[80%] w-[100%]',
@@ -16,7 +21,7 @@ const styles = {
 
   // hero section
   heroHeading:
-      'font-bold lg:text-[114px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white',
+      'font-bold lg:text-[114px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[100.4px] md:leading-[80.4px] sm:leading-[55.4px] leading-[40.4px] uppercase text-white',
   heroDText:
       'md:w-[212px] sm:w-[80px] w-[60px] md:h-[90px] sm:h-[48px] h-[38px] md:border-[18px] sm:border-[8px] rounded-r-[50px] border-white sm:mx-2 mx-[6px]',
 };

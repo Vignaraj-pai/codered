@@ -8,6 +8,7 @@ import { TypingText, ExploreCard, TitleText } from '../components';
 import { staggerContainer } from '../utils/motion';
 
 import { exploreWorlds } from '../constants';
+import { EventCountDown } from '../components/EventCountDown';
 
 const Explore = () => {
   const [active, setActive] = useState('world-2');
@@ -22,8 +23,8 @@ const Explore = () => {
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
         <TypingText title="| The World" textStyles="text-center" />
-        <TitleText title={<>Choose the world you want <br className="md:block hidden " />to Explore</>} textStyles="text-center" />
-
+        <TitleText title={<>Conquer the Planets <br className="md:block hidden " /></>} textStyles="text-center" />
+        <EventCountDown />
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {exploreWorlds.map((world, index) => (
             <ExploreCard

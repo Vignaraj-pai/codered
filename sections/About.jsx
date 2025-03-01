@@ -17,7 +17,7 @@ const About = () => (
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
       <TypingText
-        title="| About Metadroid"
+        title="The Lazurus Missions"
         textStyles="text-center"
       />
 
@@ -25,11 +25,26 @@ const About = () => (
         variants={fadeIn('up', 'tween', 0.2, 1)}
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
-        <span className="font-extrabold"> Metadroid </span> is a new thing in the future, where you can enjoy the virtual world by feeling like it's really real, you can feel what you feel in this metaverse world, because this is really the <span className="font-extrabold">madness of the metaverse</span> of today, using only <span className="font-extrabold">VR</span> devices you can easily explore the metaverse world you want, turn your dreams into reality. Let's <span className="font-extrabold">explore</span> the madness of the metaverse by scrolling down
+        ✨ Greetings from IEEE NITK! ✨ Ready to push the boundaries of Machine Learning? Join THE LAZARUS MISSIONS 🏆—a 4-day ML Hackathon for 1st, 2nd, and 3rd-year BTech students! Tackle real-world challenges in Digital Image Processing, Computer Vision, NLP, and more!
       </motion.p>
 
-      <motion.img
+      <motion.div
         variants={fadeIn('up', 'tween', 0.3, 1)}
+        className="mt-[16px] p-[16px] bg-secondary-white bg-opacity-10 rounded-md"
+      >
+        <p className="font-bold text-[24px] text-center text-white">
+          💰 ₹15,000+ prize pool, ⏳ 96-hour challenge, and a chance to compete solo or in teams (1-3 members).
+        </p>
+        <p className="font-bold text-[24px] text-center text-white mt-[8px]">
+          📅 1st March, 6 PM – 5th March, 6 PM 2025.
+        </p>
+        <p className="font-bold text-[24px] text-center text-white mt-[8px]">
+          Register now: Unstop. 🚀 Innovate. Compete. Win! 🔥
+        </p>
+      </motion.div>
+
+      <motion.img
+        variants={fadeIn('up', 'tween', 0.4, 1)}
         src="/arrow-down.svg"
         alt="arrow-down"
         className="w-[18px] h-[28px] object-contain mt-[28px]"
