@@ -9,7 +9,8 @@ export const EventCountDown = () => {
 
   const calculateTimeLeft = () => {
     const currentTime = new Date().getTime();
-    const remainingTime = eventStart - currentTime > 0 ? eventStart - currentTime : 0;
+    let remainingTime = eventStart - currentTime > 0 ? eventStart - currentTime : eventEnd - currentTime;
+    remainingTime = remainingTime < 0 ? 0 : remainingTime;
 
     const remainingDays = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
     const remainingHours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -78,7 +79,9 @@ export const EventCountDown = () => {
         timeLeft.remainingTime !== 0 ? (
           <div className="flex flex-col items-center justify-center gap-1 ml-4">
             <span className="font-bold text-2xl text-gray-100">Remaining</span>
-            <span className="font-normal text-sm text-gray-100 opacity-80">for the event</span>
+            <span className="font-normal text-sm text-gray-100 opacity-80">for the event 
+              {eventStart < new Date().getTime() ? ' to end' : ' to start'}
+            </span>
 
             <button
               type="button"
@@ -87,7 +90,7 @@ export const EventCountDown = () => {
                 if (eventHasStarted) {
                   // scroll 200px down
                   window.scrollBy({
-                    top: 200,
+                    top: 300,
                     behavior: 'smooth',
                   });
                 } else if (eventHasEnded) {
@@ -119,7 +122,7 @@ export const EventCountDown = () => {
                   onClick={() => {
                     // scroll 200px down
                     window.scrollBy({
-                      top: 200,
+                      top: 300,
                       behavior: 'smooth',
                     });
                   }}
