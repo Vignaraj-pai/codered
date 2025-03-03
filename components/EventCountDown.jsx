@@ -79,7 +79,7 @@ export const EventCountDown = () => {
         timeLeft.remainingTime !== 0 ? (
           <div className="flex flex-col items-center justify-center gap-1 ml-4">
             <span className="font-bold text-2xl text-gray-100">Remaining</span>
-            <span className="font-normal text-sm text-gray-100 opacity-80">for the event 
+            <span className="font-normal text-sm text-gray-100 opacity-80">for the event
               {eventStart < new Date().getTime() ? ' to end' : ' to start'}
             </span>
 
